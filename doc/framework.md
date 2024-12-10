@@ -1,3 +1,5 @@
+# 架构
+
 ![画板](/resource/mind3.jpeg)
 
 系统为C/S架构

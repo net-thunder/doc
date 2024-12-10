@@ -1,4 +1,4 @@
-# 技术原理
+# 原理
 
 ![画板](/resource/mind2.jpeg)
 

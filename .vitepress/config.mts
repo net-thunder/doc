@@ -9,24 +9,41 @@ export default defineConfig({
     ],
     sidebar: [
       {
-        text: '项目简介',
-        link: 'doc/index.md'
+        text: '简介',
+        link: 'doc/intro.md'
       },
       {
         text: 'SD-WAN与VPN区别',
         link: 'doc/sdwan-vpn.md'
       },
       {
-        text: '技术原理',
+        text: '原理',
         link: 'doc/theory.md'
       },
       {
-        text: '技术架构',
+        text: '架构',
         link: 'doc/framework.md'
       },
       {
         text: '部署文档',
-        link: 'doc/deploy.md'
+        items: [
+          {
+            text: '服务端部署',
+            link: 'doc/deploy/server.md'
+          },
+          {
+            text: 'Mesh部署',
+            link: 'doc/deploy/mesh.md'
+          },
+          {
+            text: '配置路由',
+            link: 'doc/deploy/route.md'
+          },
+          {
+            text: '客户端部署',
+            link: 'doc/deploy/client.md'
+          }
+        ]
       },
       {
         text: '使用场景说明',
