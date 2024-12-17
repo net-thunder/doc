@@ -28,16 +28,24 @@ export default defineConfig({
         text: '部署文档',
         items: [
           {
+            text: '部署环境',
+            link: 'doc/deploy/index.md'
+          },
+          {
             text: '服务端部署',
             link: 'doc/deploy/server.md'
           },
           {
-            text: 'Mesh部署',
+            text: 'Mesh网关部署',
             link: 'doc/deploy/mesh.md'
           },
           {
             text: '配置路由',
             link: 'doc/deploy/route.md'
+          },
+          {
+            text: '配置安全规则',
+            link: 'doc/deploy/rule.md'
           },
           {
             text: '客户端部署',

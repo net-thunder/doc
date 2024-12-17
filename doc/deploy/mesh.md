@@ -1,53 +1,25 @@
-# Mesh部署
-dockerfile
+# Mesh网关部署
 
-```dockerfile
-FROM centos:7
-
-# COPY CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo
-
-RUN yum install net-tools -y
-RUN yum install iproute -y 
-RUN yum install wget -y
-
-RUN wget https://download.oracle.com/graalvm/21/latest/graalvm-jdk-21_linux-x64_bin.tar.gz -o /opt/graalvm-jdk-21_linux-x64_bin.tar.gz
-RUN tar -xvf /opt/graalvm-jdk-21_linux-x64_bin.tar.gz -C /opt/
-ENV JAVA_HOME=/opt/graalvm-jdk-21.0.4+8.1
-ENV PATH=$PATH:$JAVA_HOME/bin
-
-RUN mkdir -p /app/
-WORKDIR /app/
-
-COPY sdwan-node-bootstrap.jar /app
-
-CMD java -jar sdwan-node-bootstrap.jar
-```
-
-application.yaml文件配置
-
-```yaml
-# 租户code
-tenantId: default
-# sdwanServer地址
-controllerServer: 127.0.0.1:11800
-# 开启linux路由转发
-netMesh: true
-# 开启路由日志
-showVRouterLog: true
-# 开启ICE发送日志
-showICELog: true
-# 开启P2P协商日志
-showElectionLog: true
-# 开启路由规则日志
-showRouteRuleLog: true
-```
-
-启动docker脚本
-
+## 启动mesh端
 ```shell
 docker run -d \
---name net-thunder \
 --privileged \
--v $(pwd)/application.yaml:/app/application.yaml \
-net-thunder
+--name net-thunder-mesh \
+--restart=always \
+--mac-address 42:ac:bd:00:00:00 \
+-e tenantId=default \
+# controllerServer外网地址
+-e controllerServer=127.0.0.1:1800 \
+-e netMesh=true \
+-e showVRouterLog=true \
+-e showICELog=true \
+-e showElectionLog=true \
+-e showRouteRuleLog=true \
+jaspercloud/net-thunder mesh
 ```
+
+- 查看节点管理端
+![](/resource/click-node.png)
+
+- 网关部署成功，网关节点上线
+![](/resource/node-manage.png)
