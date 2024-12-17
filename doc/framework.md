@@ -2,9 +2,9 @@
 
 ![画板](/resource/mind3.jpeg)
 
-系统为C/S架构
+## 系统为C/S架构
 
-服务端由SD-WAN Server、STUN Server、Relay Server组成。
+### 服务端由SD-WAN Server、STUN Server、Relay Server组成
 
 **SD-WAN Server**
 
@@ -18,9 +18,7 @@
 
 负责在P2P打洞失败时，使用中继网络完成组网。
 
-
-
-客户端由TUN Device、VRouter、NodeCluster、ICE、SDClient、P2PClient、RelayClient组成。
+### 客户端由TUN Device、VRouter、NodeCluster、ICE、SDClient、P2PClient、RelayClient组成
 
 **TUN Device**
 
@@ -51,8 +49,7 @@
 负责P2P失败的情况下，使用Relay转发IP数据包。
 
 
-
-SD-WAN角色分类
+### SD-WAN角色分类
 
 ![画板](/resource/role.jpeg)
 
