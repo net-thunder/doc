@@ -6,6 +6,10 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     aside: false,
+    docFooter: {
+      prev: false,
+      next: false
+    },
     nav: [
     ],
     sidebar: [
