@@ -5,6 +5,7 @@ export default defineConfig({
   title: "netThunder",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    aside: false,
     nav: [
     ],
     sidebar: [
