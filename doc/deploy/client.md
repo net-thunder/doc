@@ -17,5 +17,8 @@ tenantId: default
 httpServer: 127.0.0.1:11805
 ```
 
-- 连接服务器成功
+**提示：MacOS通过右键显示包内容进入编辑**
+![](/resource/macos-show-content.png)
+
+- 点击启动，连接服务器成功
 ![](/resource/client-connect.png)
