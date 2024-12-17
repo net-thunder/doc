@@ -3,6 +3,7 @@
 - 一台有公网IP的云主机
 - 安装docker
 - [CIDR学习](https://www.sojson.com/convert/subnetmask.html)
+- cidr配置以10.15.x.x开头，避免与内网192段重复
 
 # 部署步骤
 
