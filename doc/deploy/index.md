@@ -2,6 +2,7 @@
 
 - 一台有公网IP的云主机
 - 安装docker
+- [CIDR学习](https://www.sojson.com/convert/subnetmask.html)
 
 # 部署步骤
 
